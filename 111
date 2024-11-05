@@ -1,0 +1,9 @@
+#!/bin/bash
+result=0
+for i in $(seq 1 $1); do
+if [ $((i % 37)) -eq 0 ] && [ $((i % 13)) -eq 0 ]; then
+result=$(($result + 1))
+fi
+done
+echo $result
+exit
